@@ -29,8 +29,8 @@
     crypto-config
      |- ordererOrgnanizations
      |--- example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
-     |----- ca (貌似没啥用)
-     |----- msp (貌似没啥用)
+     |----- ca (ca节点所需的认证文件)
+     |----- msp (在调用configtxgen创建orderer的创世块时需要)
      |----- orderers
      |-------- orderer.example.com
      |----------- msp (orderer节点的MSP身份认证文件)
@@ -45,7 +45,7 @@
      |-------------- server.key
      |- peerOrganizations
      |--- org1.example.com
-     |----- ca (貌似没啥用)
+     |----- ca (ca节点所需的认证文件)
      |----- msp (貌似没啥用)
      |----- peers 
      |-------- peer0.org1.example.com
