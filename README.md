@@ -27,22 +27,42 @@
    
 ```
     crypto-config
-     - ordererOrgnanizations
-        - example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
-          - ca (貌似没啥用)
-          - msp (貌似没啥用)
-          - orderers
-             - orderer.example.com
-                - msp (orderer节点的MSP身份认证文件)
-                   - admincerts (管理员身份认证文件)
-                   - cacerts ()
-                   - keystore ()
-                   - signcerts ()
-                   - tlscacerts ()
-                 - tls
-      - peerOrganizations
-         - org1.example.com
-         - org2.example.com
+     |- ordererOrgnanizations
+     |--- example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
+     |----- ca (貌似没啥用)
+     |----- msp (貌似没啥用)
+     |----- orderers
+     |-------- orderer.example.com
+     |----------- msp (orderer节点的MSP身份认证文件)
+     |------------- admincerts (管理员身份认证文件)
+     |------------- cacerts ()
+     |------------- keystore ()
+     |------------- signcerts ()
+     |------------- tlscacerts ()
+     |----------- tls
+     |-------------- ca.crt
+     |-------------- server.crt
+     |-------------- server.key
+     |- peerOrganizations
+     |--- org1.example.com
+     |----- ca (貌似没啥用)
+     |----- msp (貌似没啥用)
+     |----- peers 
+     |-------- peer0.org1.example.com
+     |---------- msp
+     |------------- admincerts (管理员身份认证文件)
+     |------------- cacerts ()
+     |------------- keystore ()
+     |------------- signcerts ()
+     |------------- tlscacerts ()
+     |---------- tls
+     |-------------- ca.crt
+     |-------------- server.crt
+     |-------------- server.key
+     |-------- peer1.org1.example.com(结构与peer0.org1.example.com相同)
+     |----- tlsca
+     |----- users
+     |--- org2.example.com(结构与org1.example.com相同)
  ```
  
  - Generating Orderer Genesis block  using configtxgen
