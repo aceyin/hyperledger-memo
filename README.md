@@ -27,22 +27,22 @@
    
     ```
     crypto-config
-     `- ordererOrgnanizations
-        `- example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
-          `- ca (貌似没啥用)
-          `- msp (貌似没啥用)
-          `- orderers
-             `- orderer.example.com
-                `- msp (orderer节点的MSP身份认证文件)
-                   `- admincerts (管理员身份认证文件)
-                   `- cacerts ()
-                   `- keystore ()
-                   `- signcerts ()
-                   `- tlscacerts ()
-                 `- tls
-      `- peerOrganizations
-         `- org1.example.com
-         `- org2.example.com
+     - ordererOrgnanizations
+        - example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
+          - ca (貌似没啥用)
+          - msp (貌似没啥用)
+          - orderers
+             - orderer.example.com
+                - msp (orderer节点的MSP身份认证文件)
+                   - admincerts (管理员身份认证文件)
+                   - cacerts ()
+                   - keystore ()
+                   - signcerts ()
+                   - tlscacerts ()
+                 - tls
+      - peerOrganizations
+         - org1.example.com
+         - org2.example.com
      ```
  
  - Generating Orderer Genesis block  using configtxgen
