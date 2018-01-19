@@ -25,7 +25,7 @@
    
    输出产物保存在 crypto-config 文件夹，包以下内容：
    
-    ```
+
     crypto-config
     `- ordererOrgnanizations
        `- example.com (目录名称来源于 crypto-config.yaml > OrdererOrgs > Domain 的值)
@@ -43,8 +43,6 @@
      `- peerOrganizations
        `- org1.example.com
        `- org2.example.com
-       
-    ```
  
  
  - Generating Orderer Genesis block  using configtxgen
