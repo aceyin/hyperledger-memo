@@ -23,6 +23,7 @@
      Domain: org1.example.com
    ```
    输出产物保存在 crypto-config 文件夹，包以下内容：
+   
    ```
    crypto-config
     `- ordererOrgnanizations
