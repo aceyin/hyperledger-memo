@@ -41,8 +41,9 @@
     `- peerOrganizations
        `- org1.example.com
        `- org2.example.com
+       
    ```
-   
+ 
  - Generating Orderer Genesis block  using configtxgen
  - Generating channel configuration transaction 'channel.tx'
  - Generating anchor peer update for origanizations
